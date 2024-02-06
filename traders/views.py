@@ -1,18 +1,15 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
-from traders.models import Traders
-from traders.forms import TradersModelForm
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 
 def home(request):
     return render(request, 'pages/home.html')
 
 
-class NewTraderCreateView(CreateView):
-    model = Traders
-    form_class = TradersModelForm
-    template_name = 'pages/new_trader.html'
-    success_url = 'home'
+@method_decorator(login_required(login_url='accounts:login'))
+def link_sala(request):
+    return render(request, 'pages/link_sala.html')
 
 
 
