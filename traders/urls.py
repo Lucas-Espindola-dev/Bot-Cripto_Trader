@@ -5,5 +5,5 @@ app_name = 'traders'
 
 urlpatterns = [
     path('home/', views.home, name='home'),
-    path('new_trader/', views.NewTraderCreateView.as_view(), name='new_trader-view'),
+    path('sala/', views.link_sala, name='link_sala')
 ]
