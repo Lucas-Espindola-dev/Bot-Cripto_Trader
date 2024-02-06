@@ -8,6 +8,12 @@ def home(request):
     return render(request, 'pages/home.html')
 
 
+class NewTraderCreateView(CreateView):
+    model = Traders
+    form_class = TradersModelForm
+    template_name = 'pages/new_trader.html'
+    success_url = 'home'
+
 
 
 
