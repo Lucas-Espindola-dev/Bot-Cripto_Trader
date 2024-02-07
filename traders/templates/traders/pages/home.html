@@ -3,14 +3,14 @@
 {% block content %}
     <div class="main-content">
         <div class="main-title">
-            <h1>Bot Crypto Trader</h1>
+            <h1>Olá, {{user.username}}</h1>
         </div>
         <div class="poster-logo">
             <img src="">
         </div>
         <div class="options-group">
             <ul>
-                <li><a>Plataforma</a></li>
+                <li><a href="{% url 'traders:plataforma' %}">Plataforma</a></li>
                 <li><a href="{% url 'traders:link_sala' %}">Link Ativação</a></li>
             </ul>
         </div>

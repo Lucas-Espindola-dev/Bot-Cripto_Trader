@@ -12,6 +12,10 @@ def link_sala(request):
     return render(request, 'pages/link_sala.html')
 
 
+def plataforma(request):
+    return render(request, 'pages/plataforma.html')
+
+
 
 
 
