@@ -5,5 +5,5 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('cadastro/', views.register_view, name='cadastro'),
-    path('login/', views.login, name='login'),
+    path('login/', views.login_view, name='login'),
 ]

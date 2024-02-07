@@ -7,7 +7,7 @@ def home(request):
     return render(request, 'pages/home.html')
 
 
-@method_decorator(login_required(login_url='accounts:login'))
+@method_decorator(login_required(login_url='accounts:login'), name="dispatch")
 def link_sala(request):
     return render(request, 'pages/link_sala.html')
 
